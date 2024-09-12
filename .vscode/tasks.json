@@ -34,7 +34,7 @@
       }
     },
     {
-      "label": "Start Container",
+      "label": "Start Ecomm Container",
       "type": "shell",
       "command": "npm run start",
       "options": {
@@ -51,7 +51,83 @@
     },
     {
       "label": "Run All Ecommerce Projects",
-      "dependsOn": ["Start Cart", "Start Products", "Start Container"],
+      "dependsOn": ["Start Cart", "Start Products", "Start Ecomm Container"],
+      "group": "build",
+      "problemMatcher": [],
+      "dependsOrder": "parallel" // Run tasks in parallel
+    },
+    {
+      "label": "Start Auth",
+      "type": "shell",
+      "command": "npm run start",
+      "options": {
+        "cwd": "${workspaceFolder}/marketing-app/auth"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated" // Ensures it runs in a new terminal
+      }
+    },
+    {
+      "label": "Start Dashboard",
+      "type": "shell",
+      "command": "npm run start",
+      "options": {
+        "cwd": "${workspaceFolder}/marketing-app/dashboard"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated" // New terminal for this task
+      }
+    },
+    {
+      "label": "Start Marketing",
+      "type": "shell",
+      "command": "npm run start",
+      "options": {
+        "cwd": "${workspaceFolder}/marketing-app/marketing"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated" // New terminal for this task
+      }
+    },
+    {
+      "label": "Start Marketing Container",
+      "type": "shell",
+      "command": "npm run start",
+      "options": {
+        "cwd": "${workspaceFolder}/marketing-app/container"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated" // New terminal for this task
+      }
+    },
+    {
+      "label": "Run All Marketing Projects",
+      "dependsOn": [
+        "Start Auth",
+        "Start Dashboard",
+        "Start Marketing",
+        "Start Marketing Container"
+      ],
       "group": "build",
       "problemMatcher": [],
       "dependsOrder": "parallel" // Run tasks in parallel
