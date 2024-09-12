@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Cart",
+      "type": "shell",
+      "command": "npm run start",
+      "options": {
+        "cwd": "${workspaceFolder}/ecommerce-app/cart"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated" // Ensures it runs in a new terminal
+      }
+    },
+    {
+      "label": "Start Products",
+      "type": "shell",
+      "command": "npm run start",
+      "options": {
+        "cwd": "${workspaceFolder}/ecommerce-app/products"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated" // New terminal for this task
+      }
+    },
+    {
+      "label": "Start Container",
+      "type": "shell",
+      "command": "npm run start",
+      "options": {
+        "cwd": "${workspaceFolder}/ecommerce-app/container"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated" // New terminal for this task
+      }
+    },
+    {
+      "label": "Run All Ecommerce Projects",
+      "dependsOn": ["Start Cart", "Start Products", "Start Container"],
+      "group": "build",
+      "problemMatcher": [],
+      "dependsOrder": "parallel" // Run tasks in parallel
+    }
+  ]
+}
