@@ -15,7 +15,8 @@
         "reveal": "always",
         "focus": false,
         "panel": "dedicated" // Ensures it runs in a new terminal
-      }
+      },
+      "icon": { "color": "terminal.ansiGreen", "id": "run" }
     },
     {
       "label": "Start Products",
@@ -31,7 +32,8 @@
         "reveal": "always",
         "focus": false,
         "panel": "dedicated" // New terminal for this task
-      }
+      },
+      "icon": { "color": "terminal.ansiGreen", "id": "run" }
     },
     {
       "label": "Start Ecomm Container",
@@ -47,14 +49,16 @@
         "reveal": "always",
         "focus": false,
         "panel": "dedicated" // New terminal for this task
-      }
+      },
+      "icon": { "color": "terminal.ansiGreen", "id": "run" }
     },
     {
       "label": "Run All Ecommerce Projects",
       "dependsOn": ["Start Cart", "Start Products", "Start Ecomm Container"],
       "group": "build",
       "problemMatcher": [],
-      "dependsOrder": "parallel" // Run tasks in parallel
+      "dependsOrder": "parallel", // Run tasks in parallel
+      "icon": { "color": "terminal.ansiGreen", "id": "run-all" }
     },
     {
       "label": "Start Auth",
@@ -70,7 +74,8 @@
         "reveal": "always",
         "focus": false,
         "panel": "dedicated" // Ensures it runs in a new terminal
-      }
+      },
+      "icon": { "color": "terminal.ansiGreen", "id": "run" }
     },
     {
       "label": "Start Dashboard",
@@ -86,7 +91,8 @@
         "reveal": "always",
         "focus": false,
         "panel": "dedicated" // New terminal for this task
-      }
+      },
+      "icon": { "color": "terminal.ansiGreen", "id": "run" }
     },
     {
       "label": "Start Marketing",
@@ -102,7 +108,8 @@
         "reveal": "always",
         "focus": false,
         "panel": "dedicated" // New terminal for this task
-      }
+      },
+      "icon": { "color": "terminal.ansiGreen", "id": "run" }
     },
     {
       "label": "Start Marketing Container",
@@ -118,7 +125,8 @@
         "reveal": "always",
         "focus": false,
         "panel": "dedicated" // New terminal for this task
-      }
+      },
+      "icon": { "color": "terminal.ansiGreen", "id": "run" }
     },
     {
       "label": "Run All Marketing Projects",
@@ -130,7 +138,8 @@
       ],
       "group": "build",
       "problemMatcher": [],
-      "dependsOrder": "parallel" // Run tasks in parallel
+      "dependsOrder": "parallel", // Run tasks in parallel
+      "icon": { "color": "terminal.ansiGreen", "id": "run-all" }
     }
   ]
 }
