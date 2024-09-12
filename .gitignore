@@ -1,12 +1,6 @@
-#dependencies
-/ecommerce-app/products/node_modules
-/ecommerce-app/cart/node_modules
-/ecommerce-app/container/node_modules
+# Ignore node_modules in any folder
+**/node_modules/
 
-#production
-/ecommerce-app/products/build
-/ecommerce-app/products/dist
-/ecommerce-app/cart/build
-/ecommerce-app/cart/dist
-/ecommerce-app/container/build
-/ecommerce-app/container/dist
+# Ignore build and dist directories in any folder
+**/build/
+**/dist/
