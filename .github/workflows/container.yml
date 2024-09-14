@@ -5,11 +5,11 @@ on:
     branches:
       - master
     paths:
-      - "container/**"
+      - "marketing-app/container/**"
 
 defaults:
   run:
-    working-directory: "container"
+    working-directory: "marketing-app/container"
 
 jobs:
   build:
